@@ -1,0 +1,46 @@
+{
+    "depencias": [
+        {
+            "nombre": "Decanatura",
+            "consecutivo": 1,
+            "subdependencias": [
+                {
+                    "nombre": "Decano",
+                    "consecutivo": 1
+                },
+                {
+                    "nombre": "Secretaria general",
+                    "consecutivo": 2
+                }
+            ]
+        },
+        {
+            "nombre": "Departamento de sistemas",
+            "consecutivo": 4,
+            "subdependencias": [
+                {
+                    "nombre": "Jefe de departamento",
+                    "consecutivo": 1
+                },
+                {
+                    "nombre": "Tesoreria",
+                    "consecutivo": 2
+                }
+            ]
+        },
+        {
+            "nombre": "Departamento de electronica",
+            "consecutivo": 5,
+            "subdependencias": [
+                {
+                    "nombre": "Jefe de departamento",
+                    "consecutivo": 1
+                },
+                {
+                    "nombre": "Tesoreria",
+                    "consecutivo": 2
+                }
+            ]
+        }
+    ]
+}
