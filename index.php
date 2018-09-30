@@ -1,6 +1,6 @@
 <?php
   date_default_timezone_set('America/Bogota');
-
+  
   $data = file_get_contents("datos.json");
   $info = json_decode($data);
   if(isset($_POST['submit']))
@@ -117,7 +117,7 @@
         function cambiarContenido(){
             var dependencia = document.getElementById("dependencia").value;
             var subDependencia = document.getElementById("subdependencias").value;
-            var dep, subDep = "", codigo, num = "0";
+            var dep, subDep = "", codigo, num = "125"; 
             if(dependencia == 1){
               dep = "8.1."
               if(subDependencia == 1){
@@ -125,7 +125,7 @@
               } else if(subDependencia == 2){
                 subDep = "2/";
               }
-              codigo = dep.concat(subDep)
+              codigo = dep.concat(subDep);
               document.getElementById("titulo").innerHTML = "Decanatura";
               document.getElementById("texto").style.backgroundColor = " #d5dbdb ";
               document.getElementById("texto").innerHTML = "La Decanatura es la oficina responsable de la dirección académica y administrativa de una facultad universitaria. La principal autoridad en ella es el Decano. ";
