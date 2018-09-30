@@ -7,6 +7,7 @@
   {
     $con_dep = $info->dependencias[(int)$_POST['dependencia']-1]->consecutivo;
     $con_subdep = $info->subdependencias[(int)$_POST['subdependencia']-1]->consecutivo;
+   /* $num_documento = $info->num_documento;*/
   }
 ?>
 
@@ -26,9 +27,11 @@
     </header>
     <main id="_contenido">
       <form id="form" action="index.php" method="post">
+     
         <table>
           <tr>
             <td>
+            <form action= "guardar.php" method="post" name="frm"> 
               <select name="dependencia" id="dependencia">
                 <option value="0" >--Seleccione</option>                  
                 <?php for($i = 0; $i < count($info->dependencias); $i++) {?>
@@ -41,11 +44,13 @@
               </select>
             </td>
             <td>
-              <input type="button" name="btnCalcular" value="Calcular" onClick="cambiarContenido()">
+              <input type="button" name="btnCalcular" value="Calcular Código" onClick="cambiarContenido()">
             </td>
           </tr>
-        </table>            
+        </table>  
+        </form>          
       </form>
+         
       <hr>
       <section>
         <h2 id="titulo"></h2>
@@ -114,19 +119,20 @@
             var subDependencia = document.getElementById("subdependencias").value;
             var dep, subDep = "", codigo, num = "0";
             if(dependencia == 1){
-              dep = "1."
+              dep = "8.1."
               if(subDependencia == 1){
                 subDep = "1/";
               } else if(subDependencia == 2){
                 subDep = "2/";
               }
-              codigo = dep.concat(subDep);
+              codigo = dep.concat(subDep)
               document.getElementById("titulo").innerHTML = "Decanatura";
-              document.getElementById("texto").innerHTML = "Decanatura";
+              document.getElementById("texto").style.backgroundColor = " #d5dbdb ";
+              document.getElementById("texto").innerHTML = "La Decanatura es la oficina responsable de la dirección académica y administrativa de una facultad universitaria. La principal autoridad en ella es el Decano. ";
               document.getElementById("codigo").innerHTML = codigo;
-              document.getElementById("codigo").style.backgroundColor = "blue";
+              document.getElementById("codigo").style.backgroundColor = "gray";
             } else if(dependencia == 2){
-              dep = "4."
+              dep = "8.4."
               if(subDependencia == 1){
                 subDep = "1/";
               } else if(subDependencia == 2){
@@ -134,11 +140,12 @@
               }
               codigo = dep.concat(subDep).concat(num);
               document.getElementById("titulo").innerHTML = "Departamento de sistemas";
-              document.getElementById("texto").innerHTML = "aqui texto";
+              document.getElementById("texto").style.backgroundColor = "#49d5d5";
+              document.getElementById("texto").innerHTML = "El Programa de Ingeniería de Sistemas pertenece a la Facultad de Ingeniería Electrónica y Telecomunicaciones de la Universidad del Cauca y fue creado mediante el Acuerdo Nº 030 de mayo de 1998, expedido por el Consejo Superior.";
               document.getElementById("codigo").innerHTML = codigo;
               document.getElementById("codigo").style.backgroundColor = "yellow";
             } else if(dependencia == 3){
-              dep = "5."
+              dep = "8.5."
               if(subDependencia == 1){
                 subDep = "1/";
               } else if(subDependencia == 2){
@@ -146,7 +153,8 @@
               }
                codigo = dep.concat(subDep);
               document.getElementById("titulo").innerHTML = "Departamento de electrónica";
-              document.getElementById("texto").innerHTML = "aqui texto";
+              document.getElementById("texto").style.backgroundColor = "#49d57e";
+              document.getElementById("texto").innerHTML = "La Facultad de Ingeniería Electrónica y Telecomunicaciones de la Universidad del Cauca fue creada mediante Acuerdo No.40 del 17 de Diciembre de 1960, emanado del Comité Administrativo de la Asociación Colombiana de Universidades y el Fondo Universitario Nacional y refrendado por el Ministerio de Educación Nacional el 19 de Diciembre de 1960.";
               document.getElementById("codigo").innerHTML = codigo;
               document.getElementById("codigo").style.backgroundColor = "green";
             } else {
