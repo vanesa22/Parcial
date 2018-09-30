@@ -1,0 +1,248 @@
+@charset "utf-8";
+
+body {
+  background: #D6F5F9;
+  border: none;
+  color: #FFFFFF;
+  font-family: 'Lato', 'Helvetica Neue', sans-serif;
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+body a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+header h1 {
+	font-style: italic;
+  padding-top: 60px;
+  padding-right: 40px;
+}
+
+header p{
+  padding-right: 40px;
+}
+
+header a{
+	color: #FFFFFF;
+}
+
+header a:hover{
+	color: #6A99A8;
+	text-decoration: underline;
+}
+
+nav a{
+  width: 205px;
+  height: 19px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 15px;
+  padding-top: 20px;
+  margin-left: 0 auto;
+  float: left;
+  color: #FFFFFF;
+}
+
+nav a:hover{
+  width: 205px;
+  height: 20px;
+  background: #272F3F;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,.15);
+  display: inline-block;
+  overflow: hidden;
+  margin-left: 0px;
+  float: left;
+}
+
+section div h4{
+  padding-left: 5px;
+}
+
+section div p{
+  float: left;
+  padding-left: 15px;
+  position: static;
+  display: inline-block;
+  width: 50%;
+}
+
+section div img{
+  float: right;
+  padding-right: 20px;
+  position: relative;
+  display: inline-block;
+
+}
+
+section map img{
+  display: table;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0,0,0,.15);
+  overflow: hidden;
+}
+
+
+section {
+  width: 650px;
+  float: left;
+  padding: 15px;
+  text-align: justify;
+  display: inline-block;
+}
+
+section img{
+  display: table;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0,0,0,.15);
+  overflow: hidden;
+}
+
+section hr{
+	box-shadow: 0 0 10px rgba(0,0,0,.15);
+	display: inline-block;
+  	overflow: hidden;
+}
+
+
+/* MAQUETADO */
+
+#cabecera {
+  width: 1000px;
+  height: 200px;
+  margin: 0 auto;
+  padding: 15px;
+  padding-right: 0px;
+  background: #272F38;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  color: #FFFFFF;
+  font-size: 16px;
+  text-align: right;
+}
+
+
+#menu{
+  width: 1012px;
+  height: 60px;
+  background: #272F38;
+  border: none;
+  margin: 10px auto;
+  padding: 0px auto;
+  padding-left: 0px;
+  box-shadow: 0 0 8px rgba(0,0,0,.15);
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 16px;
+}
+
+
+
+#pie  {
+	width: 980px;
+  padding: 15px;
+  padding-right: 20px;
+  margin: 0px auto;
+  background: #272F38;
+  border-radius: 4px;
+  font-size: 11px;
+  color: #FFFFFF;
+  text-align: center;
+ }
+
+
+/* Formulario*/
+
+
+fieldset {
+    border: none;
+    padding-right: 25px;
+}
+
+#_contenido {
+  width: 980px;
+  border-radius: 4px;
+  overflow: hidden; 
+  margin: 15px auto;
+  padding: 15px;
+  padding-left: 15px;
+  background: #FFFFFF;
+  color: #000000;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  text-align: justify;
+}
+
+#_contenido section{
+   width: 90%;
+   margin: 10px auto; 
+   padding: 10px;
+}
+
+#form {
+   width: 90%;
+   margin: 10px auto; 
+   padding: 10px;
+}
+
+#form table{
+  width: 90%;
+  margin: 10px auto; 
+  padding: 10px;
+}
+
+#form select {
+  width: 180px; 
+  height: 30px; 
+  padding: 5px 5px 5px 10px; 
+  margin: 0 20 20px 0;
+  border-radius: 5px; 
+  font-family: sans-serif; 
+  font-size: 14px;
+  background: #F4F4F6;
+}
+
+#form input{
+  width: 180px;
+  height: 30px; 
+  padding: 5px 5px 5px 15px; 
+  margin: 0 20px 20px 0;
+  border-radius: 5px; 
+  font-size: 14px; 
+  font-family: sans-serif; 
+  background: #F4F4F6;
+  float: right;
+}
+
+#form input[type=submit]{
+   width: 180px; 
+   height: 30px; 
+   padding: 5px; 
+   margin: 0 20 20px 0;
+   border: 1px solid #556f8c;
+   cursor: pointer;
+   background: #6A99A8;
+   font-size: 14px;
+   float: left;
+ }
+
+#form input[type=submit]:hover {
+   width: 180px; 
+   height: 35px; 
+   padding: 10px 15px; 
+   margin: 0 20 20px 0;
+   border: 1px solid #556f8c;
+   background: #272F38;
+   color: #FFFFFF;
+   cursor: pointer;
+   float: left;
+}
+
