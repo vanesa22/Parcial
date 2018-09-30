@@ -222,7 +222,7 @@ fieldset {
   float: right;
 }
 
-#form input[type=submit]{
+#form input[type=button]{
    width: 180px; 
    height: 30px; 
    padding: 5px; 
@@ -234,7 +234,7 @@ fieldset {
    float: left;
  }
 
-#form input[type=submit]:hover {
+#form input[type=button]:hover {
    width: 180px; 
    height: 35px; 
    padding: 10px 15px; 
@@ -244,5 +244,10 @@ fieldset {
    color: #FFFFFF;
    cursor: pointer;
    float: left;
+}
+
+#codigo{
+  font-size: 34px;
+  text-align: center;
 }
 

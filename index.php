@@ -36,12 +36,12 @@
                 </select>
             </td>
             <td>
-              <select id="subdependencias" name="subdependencia">
+              <select name="subdependencia" id="subdependencias" onload="alertContents()">
                 <option value="0">--Seleccione</option>
               </select>
             </td>
             <td>
-              <input type="submit" name="btnCalcular" value="Calcular">
+              <input type="button" name="btnCalcular" value="Calcular" onClick="cambiarContenido()">
             </td>
           </tr>
         </table>            
@@ -50,7 +50,7 @@
       <section>
         <h2 id="titulo"></h2>
         <p id="texto"></p>
-        <div id="codigo"></div>
+        <div id="codigo" class="codigo"></div>
       </section>
     </main>
     <footer id="pie">
@@ -110,24 +110,49 @@
         }
 
         function cambiarContenido(){
-            $valor = $_POST["dependencia"];
             var dependencia = document.getElementById("dependencia").value;
+            var subDependencia = document.getElementById("subdependencias").value;
+            var dep, subDep = "", codigo, num = "0";
             if(dependencia == 1){
+              dep = "1."
+              if(subDependencia == 1){
+                subDep = "1/";
+              } else if(subDependencia == 2){
+                subDep = "2/";
+              }
+              codigo = dep.concat(subDep);
               document.getElementById("titulo").innerHTML = "Decanatura";
               document.getElementById("texto").innerHTML = "Decanatura";
-              document.getElementById("codigo").innerHTML = "1.";
+              document.getElementById("codigo").innerHTML = codigo;
               document.getElementById("codigo").style.backgroundColor = "blue";
             } else if(dependencia == 2){
+              dep = "4."
+              if(subDependencia == 1){
+                subDep = "1/";
+              } else if(subDependencia == 2){
+                subDep = "2/";
+              }
+              codigo = dep.concat(subDep).concat(num);
               document.getElementById("titulo").innerHTML = "Departamento de sistemas";
-              document.getElementById("texto").innerHTML = "Decanatura";
+              document.getElementById("texto").innerHTML = "aqui texto";
+              document.getElementById("codigo").innerHTML = codigo;
               document.getElementById("codigo").style.backgroundColor = "yellow";
             } else if(dependencia == 3){
+              dep = "5."
+              if(subDependencia == 1){
+                subDep = "1/";
+              } else if(subDependencia == 2){
+                subDep = "2/";
+              }
+               codigo = dep.concat(subDep);
               document.getElementById("titulo").innerHTML = "Departamento de electrónica";
-              document.getElementById("texto").innerHTML = "Decanatura";
+              document.getElementById("texto").innerHTML = "aqui texto";
+              document.getElementById("codigo").innerHTML = codigo;
               document.getElementById("codigo").style.backgroundColor = "green";
             } else {
               document.getElementById("titulo").innerHTML = "Dependencias de la Universidad del Cauca";
               document.getElementById("texto").innerHTML = "Seleccione la dependencia y la subdependencia, luego presione el botón Calcular. La aplicación despliega el nombre de la dependencia, una breve descripción y el número consecutivo.";
+              document.getElementById("codigo").innerHTML = "";
             }
         }
 
@@ -136,9 +161,7 @@
             makeRequest('cargarDatos.php?Q='+x.value);
         });
     </script>
-    <span style="cursor: pstyle="cursor: pointer; text-decoration: underline" onclick="makeRequest('index.php?Q=1')">
-        Hacer una petición
-    </span>
+    
           
   </body>
   </html>
